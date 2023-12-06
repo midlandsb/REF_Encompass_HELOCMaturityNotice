@@ -1,0 +1,152 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>874,633</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="498,527" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="436,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,242" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,163" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Word" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="1b6b4ad7-d974-41d9-8e20-e6008ca02913" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,337" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                  <uix:NClick ClickType="Single" DisplayName="Click 'winword.exe Word'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1b6b4ad7-d974-41d9-8e20-e6008ca02913" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="186, 141, 184, 156" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'Blank document'" FullSelectorArgument="&lt;uia automationid='msotcidPlaceHome' cls='NetUIElement' name='Home' /&gt;&lt;uia automationid='HomePageSlabCreateNew' cls='NetUISlabContainer' name='New' /&gt;&lt;uia cls='NetUIListView' /&gt;&lt;uia cls='NetUIListViewItem' name='Blank document' /&gt;" FuzzySelectorArgument="&lt;uia automationid='msotcidPlaceHome' cls='NetUIElement' name='Home' /&gt;&lt;uia automationid='HomePageSlabCreateNew' cls='NetUISlabContainer' name='New' /&gt;&lt;uia cls='NetUIListView' /&gt;&lt;uia cls='NetUIListViewItem' name='Blank document' role='List Item' automationid='' check:fulltext='Blank document' /&gt;" Guid="f4b97b78-703e-4cbe-aac2-b204f61bf630" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALgAAACcCAYAAADMDmHnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR3SURBVHhe7ZZBThtBFAVzWl+Gi7DiCJwBWfKSA7Bnw8rRs/SlpvUCIYkiu6iSSpqe6Z4ee0qGH4fD4axK1cAVrYErWgNXtAauaA1c0Rq4ojVwRWvgitbAFa2BK1oDV7QGrmgNXNEauKI1cEVr4IrWwBUtPvCHh4fz8Xg8n04nXcx3ku+mfWckv0Xgb29vZ3lPvhMDB2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4do4B0Dh2jgHQOHaOAdA4eYl3g8Hs+n00kX850YuOqNa+CK1sAVrYErWgNXtAauaA1c0Rq4ojVwRWvgitbAFa2BK1oDV7QGrmgNXNEauKLFBL5zf39/OX93d/du/FWzLuQ+7Xrzb/fUfycq8MfHx8vx09PTZZxjA/+6r6+vl++wXbs1kYFPlDk28K9r4FdomMCfn5/PLy8vl+M9tpV9zvzyh9wj1/bA8/JDjlf3tWH2nHsMazyz95C5+57reObnsw7Zbx/P/dfzefZ1z/Z55/OFmX/LYv8HnzjmZU5s4xrKHE/wE0XOr3Hl+sxZnTmzx4ST8VzLPdvcMMHPfjMn43VNxnHItXnWCbQ9e87HPHvmzT3a583YX/ArNLSI5mXmONfygleyZp+zjudeieFXv2iJYb22rt+vxQlowlqvxdlzglvHc+/5rOte+zh77ORzfLQmYwO/QsO89Dgvqb3wfc1HLzyG3C/k2qwfc9814n3P9VqcZ/sfge97f7Ym43m+dc2t+q1+wfPrPS985vxu4Dk3v/6z5zhzZv3MW9d/9GwT08yf87Nm7pfz+7UZZ90+jmGd+9nnzdjAr9CdFsAch/ypDp+98BhyLtfy8sPMHdd/fRJHmDnZY2WeLc79h9lnvd+fBp7xPMuw3uOzNe3X/9bEBK7aNHBFa+CK1sAVrYErWgNXtAauaA1c0Rq4ojVwRWvgitbAFa2BK1oDV7QGrmgNXNEauKI1cEVr4IrWwBWtgSvYw/knHohHq/3HLQMAAAAASUVORK5CYII=" InformativeScreenshot="9fc526d4354d0a989e654010b6cc81de.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Word' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="224, 257, 109, 26" FriendlyName="'winword.exe Word'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAAAaCAYAAAC939IvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHRSURBVGhD7ZWLacNAEERToupxK67DRbgEN6AC3IDDEzxYLxfJsonFwg4Mub3930TJzzRNj2YttmgF2aIVZItWkC1aQbZoBdmiFWSLVpAtWkG2aAW5W7SM8/m83J9Opyd7L8kD1Bn5R/y0Z1W+JdrlclnO1+t1sTm3aPt5v9+XNxz51viRaD405xZtPw8R7Xa7PeZ5Xs75ASNyjF8ooAa+LBoLAc6RORfY0xoiPoi9BbG5Z7SNZ1dBv2xbP94ze+w52tf9gPGv8uP/aS7sgD6gjMt7VkQX5T4+GH5jIo2xh4+BrY+ao1igiPYzBjvmYEOBz1l99NHs3ENmJ84ao32xD/nSHJafDsgZH0NHkJNjom0tFvzrN48Foy/mZx/0UXys6IP29BGjbW13jb2yTY8M9ljLwT5ENGjj0RI5Z20JCKgH8JkvqRuFyT2jDzrbN0TLvbdysJ0v5rzCf/nS+MpcwphXRePOr9Se0hjzjYv5a7P5QMZ7b471uM8+bfKyDUGM3doX+6uiRYyW8gz4MwG2loCAO3wsBIyV8c8uCwNj6BHhbND6wj6x3ruiYTuLiDW2ckZf6Rp3i9Y8ni1aQbZoBdmiFWSLVpAtWkG2aOU4PX4BU/3SRNf1QWAAAAAASUVORK5CYII=" SearchSteps="Image" TargetType="ImageBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="52, 52, 1394, 614" FilePath="C:\Program Files\Microsoft Office\root\Office16\winword.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHJSURBVFhH7ZcvSENRFMZfkyE+LIoaNOkQwSAzOIOoiFHUIGgxGFZkxTLQothEEISJUVBEWDIsLSwsiOADlQUFkQXDgiIiBsNx3+XecSf3+p6PM5DhDz7YPds55+Pcs3/OP36MHz97FVGd5Mk2dgxJrJJt7JiSOCXb2DElcUq2sWNK4pRsYye+XyQ/jabvjcWDyOlYzHkVURh1LZ1TfyItTJiKBxEMGIsHVed0iqLJHA2s34TS3zGg6FvJV4uXyh8iNpwsVGMKdWYzcPv4JgrPbV2J82TqQpxB8qBYEysUX/gNnOafRPGdzIM4H2ZL4gyyl2URgxGA51Qem4GNoztRXDVTEwGv758ipkypiUBsBjB6gHvHnQOYgCGwvHstRg9wFewGIAWuAWAq+tgVeo4bW6X22bOa2G9UY0AfO8Ak8K4AuAagLyDEakAtIoAZFdeN6QsIsRpQiwjw2BTXFxBiNaAWEeiLpn8m6HGI1UAYNYSB0F/HbTMnFOmdJ3dkk1rH9kJJ/uyw09Q9QVb1TFEkulBfA82DCfKTG982Fg8i2cZOy9Aa/SQ3ljIWDirZxo4piVOyjR1TEqdkGzuVF3nfkxjl/9eswXGcL2IzjE/x0LYjAAAAAElFTkSuQmCC" InformativeScreenshot="4578ce3e9696f84e9330826f0dca733f.png" Selector="&lt;wnd app='winword.exe' cls='OpusApp' title='Word' /&gt;" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>
